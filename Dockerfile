@@ -16,4 +16,7 @@ RUN apt-get update \
   && rm -rf /tmp/* /var/lib/apt/lists/*
 USER seluser
 
+EXPOSE 4444
+
 ENTRYPOINT ["dumb-init"]
+CMD ["/opt/bin/entry_point.sh"]
